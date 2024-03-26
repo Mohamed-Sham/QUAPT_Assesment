@@ -1,0 +1,257 @@
+.address-text{
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-left-col {
+    display: flex;
+    align-items: center;
+}
+.header-right-col{
+    text-align: end;
+}
+.location-img {
+    width: 30px;
+    height: 30px;
+}
+.user-img {
+    width: 40px;
+    height: 40px;
+}
+.has-search {
+    position: relative;
+}
+.form-control-feedback{
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+.form-control{
+    padding-left: 33px;
+}
+.form-control::placeholder {
+    color: #999; 
+    font-size: 13px;
+}
+.top-carousel-row{
+    display: flex;
+    overflow: auto;
+    column-gap: 10px;
+}
+.top-carousel-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+.top-carousel-img{
+    width: 250px;
+    height: 200px;
+    border-radius: 7px;
+}
+.top-carousel-container{
+    position: relative;
+}
+.top-carousel-content{
+    position: absolute;
+}
+.top-carousel-top-text {
+    position: relative;
+    background-color: #c31313;
+    width: 70%;
+    color: white;
+    top: 15px;
+    border-radius: 0 5px 5px 0;
+    padding: 3px 0px;
+    text-align: end;
+    padding-right: 5px;
+}
+.top-carousel-middle-text{
+    position: relative;
+    top: 25px;
+    left: 15px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 37px;
+    word-break: break-word;
+    width: 130px;
+}
+.top-carousel-middle1-text{
+    position: relative;
+    top: 25px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.top-carousel-bottom-text{
+    position: relative;
+    top: 20px;
+    left: 19px;
+    color: #93a1a0;
+}
+
+.top-icon-row{
+    display: flex;
+    column-gap: 7px;
+}
+.top-icon-container {
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    border: 1px solid #999;
+    align-items: center;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 7px;
+}
+.top-icon-text {
+    line-height: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.top-icon-img {
+    width: 45px;
+    height: 45px;
+}
+.filter-carousel-row{
+    display: flex;
+    column-gap: 10px;
+    overflow: auto;
+}
+.filter-carousel-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+.filter-carousel-container{
+    width: fit-content;
+    border: 1px solid #999;
+    padding: 0px 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-icon{
+    width: 18px;
+}
+.filter-text{
+    color: gray;
+    padding-left: 5px;
+}
+select {
+  border: none;
+  outline: none; 
+  appearance: none;
+  -webkit-appearance: none; 
+  width: 100%;
+}
+select {
+  background-image: url('/assets/drop-down-arrow.png'); 
+  background-repeat: no-repeat;
+  background-position: right center; 
+  background-size: 10px;
+  cursor: pointer;
+  color: gray;
+  width: 60px;
+}
+select:invalid{
+    color: gray;
+}
+option{
+    color: black;
+}
+.hotel-container {
+    display: flex;
+}
+
+.footer-div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0,);
+}
+.btn{
+    border: none;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #a59f9f38;
+}
+
+@media screen and (max-width: 767px) {
+    .address-text{
+        font-size: 16px;
+    }
+
+    .user-img {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+
+/*  */
+.container {
+    position: relative;
+}
+  
+.header-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    padding: 10px; 
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+  
+.content-div {
+    padding-top: 60px; 
+    padding-bottom: 100px; 
+    overflow-y: auto; 
+    height: calc(100% - 160px);
+}
+
+
+/* TOGGLE CSS */
+.toggle-space {
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: #dfe3e86b !important;
+}
+.toggle-space button {
+    margin: -10px 0 0 0 !important;
+    outline: none;
+}
+.toggle-space button:focus,
+.mat-button-toggle-disabled:focus,
+.mat-button-toggle-checked:focus {
+    outline: none;
+}
+.toggle-space .mat-button-toggle-group-appearance-standard {
+    border: none !important;
+    width: 100%;
+}
+#toggle-1.mat-button-toggle {
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    background-color: transparent;
+    height: 30px;
+}
+#toggle-1.mat-button-toggle-disabled {
+    color: #454f5b;
+    background-color: #fff !important;
+}
+#toggle-1.mat-button-toggle-checked {
+    color: #212B35;
+    background-color: #fff !important;
+}

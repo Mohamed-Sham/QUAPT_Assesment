@@ -1,0 +1,139 @@
+<div class="container mt-2">
+
+    <div class="header-div">
+        <div class="row">
+            <div class="col-9 col-sm-9 col-md-6 col-lg-6 col-xl-6 header-left-col">
+                <img src="../../../assets/location-pin.png" class="location-img"/>
+                <span class="address-text">657-Mars, Milkyway</span>
+            </div>
+            <div class="col-3 col-sm-3 col-md-6 col-lg-6 col-xl-6 header-right-col">
+                <img src="../../../assets/user.png" class="user-img"/>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="content-div">
+        <div class="row mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
+                <div class="has-search">
+                    <span class="form-control-feedback">
+                        <img src="../../../assets/magnifying-glass.png" alt="search" />
+                    </span>
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="search"
+                        placeholder="Search for resturant, cuisines..."
+                    />
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="toggle-space mb-3">
+                    <div class="mat-button-toggle" >
+                        <mat-button-toggle-group #group="matButtonToggleGroup" value="delivery" class="topmat">
+                            <mat-button-toggle value="delivery" id="toggle-1">
+                                <span class="label-text">
+                                    Delivery
+                                </span>
+                            </mat-button-toggle>
+                
+                            <mat-button-toggle value="self" id="toggle-1">
+                                <span class="label-text">
+                                    Selt pickup
+                                </span>
+                            </mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-2">
+            <div class="top-carousel-row">
+                <div class="top-carousel-container" *ngFor="let item of Top_carouselList_JSON">
+                    <div class="top-carousel-content">
+                        <div class="top-carousel-top-text">{{item.topText | uppercase}}</div>
+                        <div class="top-carousel-middle-text">{{item.bannerText | uppercase}}</div>
+                        <div class="top-carousel-middle1-text">{{item.offer | uppercase}}</div>
+                        <div class="top-carousel-bottom-text">{{item.belowText }}</div>
+                    </div>
+                    <div class="background-image">
+                        <img [src]="item.img" class="top-carousel-img"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="top-icon-row">
+                <div class="top-icon-container" *ngFor="let item of icon_List">
+                    <img [src]="item.img" class="top-icon-img"/>
+                    <span class="top-icon-text">{{item.text}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="filter-carousel-row">
+                <div class="filter-carousel-container">
+                    <img src='../../../assets/edit.png' class="filter-icon"/>
+                    <span class="filter-text">Filter</span>
+                </div>
+                <div class="filter-carousel-container">
+                    <select name="cars" id="cars">
+                        <option value="" disabled selected hidden>Rating</option>
+                        <option value="volvo">3</option>
+                        <option value="saab">4</option>
+                        <option value="opel">4.5</option>
+                        <option value="audi">5</option>
+                    </select>
+                </div>
+                <div class="filter-carousel-container">
+                    <span class="filter-text">Chinese</span>
+                </div>
+                <div class="filter-carousel-container">
+                    <span class="filter-text">Indian</span>
+                </div>
+                <div class="filter-carousel-container">
+                    <span class="filter-text">Assian</span>
+                </div>
+                <div class="filter-carousel-container">
+                    <span class="filter-text">American</span>
+                </div>
+                <div class="filter-carousel-container">
+                    <span class="filter-text">Juice</span>
+                </div>
+            </div>
+        </div>
+
+        <app-hotel-list [hotelList]="hotelListJson"></app-hotel-list>
+
+    </div>
+
+    <div class="footer-div">
+        <div class="row mt-2" style="row-gap: 10px;">
+           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <button
+                    class="btn"
+                    [ngStyle]="{'background-color': activeButton === 'nonVeg' ? 'green' : '', 'color': activeButton === 'nonVeg' ? 'white' : ''}"
+                    (click)="getHotelList('nonVeg')">
+                    No-Veg
+                </button>
+           </div>
+           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <button
+                    class="btn"
+                    [ngStyle]="{'background-color': activeButton === 'veg' ? 'green' : '', 'color': activeButton === 'veg' ? 'white' : ''}"
+                    (click)="getHotelList('veg')">
+                    Veg
+                </button>
+            </div>
+        </div>
+    </div>
+   
+</div>

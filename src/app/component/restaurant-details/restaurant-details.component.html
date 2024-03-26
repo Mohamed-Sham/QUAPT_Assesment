@@ -1,0 +1,112 @@
+<div class="container-wrapper">
+
+    <div class="top-div">
+        <div class="restaurant" [ngStyle]="{ 'background-image': 'url(' + restaurantData.img + ')' }">
+            <div class="top-img-row">
+               <div>
+                    <img src="../../../assets/arrow.png"  class="back-img" (click)="backToLanding()"/>
+               </div>
+               <div>
+                    <span>
+                        <img src="../../../assets/save-instagram.png"  class="save-img"/>
+                    </span>
+                    <span>
+                        <img src="../../../assets/share.png"  class="share-img"/>
+                    </span>
+               </div>
+            </div>
+        
+            <div class="view-gallery">
+                <img src="../../../assets/thumbnail.png" style="width: 15px;"  class="thumbnail-img"/>
+                <span>View gallery</span>
+            </div>
+        </div>
+        
+        <div class="container mt-3">
+            <div class="details-container">
+                <div class="details-container-text">
+                    <span class="hotel-name">{{restaurantData.name}}</span>
+                    <span style="color: gray; font-weight: 500;">Fine Dinning - {{restaurantData.type}}</span>
+                    <span style="color: #a5a4a4;">Sector 68, chennai</span>
+                    <span><span style="color: #0dcaf0;font-weight: 600;">Open now - </span><span style="color: #a5a4a4;">11am - 11pm today</span></span>
+                </div>
+                <div class="details-conatiner-rating">
+                    <div class="rating">4.2</div>
+                    <div class="review">
+                        <span class="review-number">1,542</span> 
+                        <span class="review-text">Reviews</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row mt-3">
+               <div class="hygiene-container">
+                <div class="hygiene-box">
+                    <span>
+                        <img src="../../../assets/hygiene-rating.png" class="hygiene-img"/>
+                    </span>
+                    <span class="hygiene-text-box">
+                        <span class="hygiene-heading">Hygiene Rating</span>
+                        <span class="hygiene-text">4- Very Good</span>
+                    </span>
+                </div>
+                <div class="hygiene-box">
+                    <span>
+                        <img src="../../../assets/hygiene-quality.png" class="hygiene-img"/>
+                    </span>
+                    <span class="hygiene-text-box">
+                        <span class="hygiene-heading">Hygiene Quality</span>
+                        <span class="hygiene-text">Hyperpure Inside</span>
+                    </span>
+                </div>
+               </div>
+            </div>
+        
+            <div class="row mt-3 mb-2">
+                <div class="" *ngFor="let item of descriptionList">
+                    <div class="descriptionlist-conatiner col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                    [ngStyle]="{ 'background-color': item.color}">
+                        <div>
+                            <img [src]="item.img" style="width: 50px; height: 50px;"/>
+                        </div>
+                        <div class="descriptionlist-box">
+                            <span class="descriptionlist-heading">{{item.heading}}</span>
+                            <span class="descriptionlist-text">{{item.text}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="footer-div">
+       <div class="footer-container">
+         <div class="footer-btn">
+            <span>
+                <img src="../../../assets/star.png" style="width: 30px;"/>
+            </span>
+            <span>Review</span>
+         </div>
+         <div class="footer-btn">
+            <span>
+                <img src="../../../assets/add-camera.png" style="width: 30px;" />
+            </span>
+            <span>photo</span>
+         </div>
+         <div class="footer-btn">
+            <span>
+                <img src="../../../assets/route.png"  style="width: 30px;"/>
+            </span>
+            <span>Direction</span>
+         </div>
+         <div class="footer-btn">
+            <span>
+                <img src="../../../assets/call.png" style="width: 30px;"/>
+            </span>
+            <span>Call</span>
+         </div>
+       </div>
+    </div>
+
+</div>

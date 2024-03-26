@@ -1,0 +1,26 @@
+.hotel-container {
+    display: flex;
+    cursor: pointer;
+}
+.left-content{
+    width: 40%;
+}
+.right-content {
+    width: 60%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+.hotel-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.amount-time-div{
+    font-size: 13px;
+    color: gray;
+}
+.food-offer {
+    color: red;
+}

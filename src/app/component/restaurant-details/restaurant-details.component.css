@@ -1,0 +1,186 @@
+.restaurant {
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+}
+.top-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.back-img {
+    width: 30px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+.save-img {
+    width: 30px;
+    position: absolute;
+    right: 75px;
+    top: 20px;
+    cursor: pointer;
+}
+.share-img {
+    width: 30px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+.view-gallery{
+    color: white;
+    position: absolute;
+    right: 15px;
+    background-color: #363535;
+    padding: 8px 9px;
+    width: 120px;
+    text-align: justify;
+    top: 200px;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.details-container{
+    display: flex;
+    justify-content: space-between;
+}
+.details-container-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.hotel-name{
+    font-size: 28px;
+    font-weight: 600;
+}
+.details-conatiner-rating {
+    border: 1px solid #80808080;
+    border-radius: 10px;
+    width: 90px;
+}
+.rating{
+    height: 50%;
+    background-color: #346f34;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+}
+.review-number{
+    color: #5d5b5b;
+    text-align: center;
+    padding-top: 5px;
+}
+.review-text{
+    color: #80808085;
+    text-align: center;
+}
+.hygiene-container{
+    display: flex;
+    column-gap: 10px;
+}
+.hygiene-box{
+    display: flex;
+    border: 1px solid #80808080;
+    border-radius: 8px;
+    align-items: center;
+    padding: 2px 5px;
+    column-gap: 8px;
+}
+.hygiene-text-box{
+    display: flex;
+    flex-direction: column;
+}
+.hygiene-img{
+    width: 25px;
+}
+.hygiene-heading{
+    color: #80808085;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.hygiene-text{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+.descriptionlist-conatiner{
+    border-radius: 10px 10px 0 0;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    column-gap: 5px;
+}
+.descriptionlist-box{
+    display: flex;
+    flex-direction: column;
+}
+.descriptionlist-heading{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+.descriptionlist-text{
+    color: #80808085;
+    font-size: 12px;
+}
+.footer-container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0.4, 0.4, 0.4, 0.4);
+    justify-content: space-around;
+}
+.footer-btn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.footer-div {
+    flex-shrink: 0; 
+    position: sticky;
+    bottom: 0;
+    background-color: transparent; 
+    padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .back-img {
+        width: 20px;
+        left: 15px;
+        top: 20px;
+    }
+    .save-img {
+        width: 20px;
+        right: 45px;
+        top: 20px;
+    }
+    .share-img {
+        width: 20px;
+        right: 15px;
+        top: 20px;
+    }
+}

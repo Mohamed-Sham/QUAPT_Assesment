@@ -1,0 +1,24 @@
+<div class="row mt-3" style="row-gap: 10px;"> 
+   <div>
+      <label for="currency" style="margin-right: 5px;">Select Currency :</label>
+      <select id="currency" [(ngModel)]="selectedCurrency" style="cursor: pointer;">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+    </div>
+   <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" *ngFor="let item of hotelList; let index = index">
+      <div class="hotel-container" (click)="navigateRestDetail(index)">
+         <div class="left-content">
+            <img [src]="item.img" style="width: 100%; height: 100%;"/>
+         </div>
+          <div class="right-content">
+             <div>
+               <div class="hotel-name">{{item.name}}</div>
+               <div class="food-type">{{item.type}}</div>
+               <div class="amount-time-div">{{ item.amount  | currencyFormat:selectedCurrency }} per person | {{+item.time}} mins</div>
+               <div class="food-offer">{{item.offer | uppercase }}</div>
+             </div>
+          </div>
+      </div>
+      
+   </div>
+ </div>
